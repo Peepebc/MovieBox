@@ -28,8 +28,8 @@ export default function TodosUsuarios(){
         <div className="flex md:justify-center pl-5 md:pl-0">
             <div className="grid md:grid-cols-3 gap-10 py-10 gap-x-64">
             {isLoading ? null :
-            usuarios.map((usuario)=>{
-              return <Usuario usuario={usuario}/>
+            usuarios.map((usuario,index)=>{
+              return <Usuario key={index} usuario={usuario}/>
             })
             }
             </div>

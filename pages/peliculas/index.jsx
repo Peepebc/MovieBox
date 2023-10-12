@@ -55,7 +55,7 @@ export default function TodasPeliculas(){
           <div className="grid grid-cols-3 md:grid-cols-7 gap-5 py-10">
           {isLoadingPeliculas ? 
               <CircularProgress color="success" /> : peliculas.map((pelicula)=>{
-              return(<div className="flex flex-col"><Link key={pelicula.id} className="relative" href={`/pelicula/${pelicula.id}`}><img className='w-32 h-44 md:w-52 md:h-80 rounded-xl hover:border-green-600 hover:border-2 hover:scale-110' src={pelicula.imagen} alt="" /></Link>
+              return(<div key={pelicula.id} className="flex flex-col"><Link  className="relative" href={`/pelicula/${pelicula.id}`}><img className='w-32 h-44 md:w-52 md:h-80 rounded-xl hover:border-green-600 hover:border-2 hover:scale-110' src={pelicula.imagen} alt="" /></Link>
               {isEditing ? <div className=" flex gap-2 justify-center p-2">
                 <button onClick={()=>{setId(pelicula.id),setOpen(!isOpen)}}  className="flex bg-red-500 w-10 h-10 justify-center items-center rounded-xl"><ImCross/></button>
                 <Link href={'/nuevaPelicula/'+pelicula.id} className="flex bg-green-500 w-10 h-10 justify-center items-center rounded-xl"><FaPen/></Link>
