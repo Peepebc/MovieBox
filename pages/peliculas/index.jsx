@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useContext, useEffect, useState } from "react";
 import Context from "../Context";
 import { ImCross } from 'react-icons/im';
-import {FaPen} from 'react-icons/Fa'
+import {FaPen} from 'react-icons/fa'
 import {  Modal } from "@mui/material";
 
 
