@@ -52,7 +52,7 @@ export default function Vistas(){
             <div className="flex flex-col items-center">
                 <div className="grid grid-cols-3 md:grid-cols-7 gap-5 py-10">
                   {isLoadingPeliculas ? null : peliculas.length>0 && peliculas.map((pelicula)=>{
-                  return(<Link href={`/pelicula/${pelicula.id}`}><img className='w-32 h-36 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
+                  return(<Link key={pelicula.id} href={`/pelicula/${pelicula.id}`}><img className='w-32 h-36 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
                 }) }
                 </div>
                 {/* <div>

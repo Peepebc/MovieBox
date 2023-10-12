@@ -170,8 +170,8 @@ export default function Pelicula() {
             {isLoadingResenas ? (
               <CircularProgress color="success" />
             ) : resenas.length > 0 ? (
-              resenas.map((resena) => {
-                return <ResenaPelicula resena={resena} />;
+              resenas.map((resena,index) => {
+                return <ResenaPelicula key={index} resena={resena} />;
               })
             ) : null}
           </div>

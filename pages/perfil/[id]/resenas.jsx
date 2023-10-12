@@ -55,7 +55,7 @@ export default function Resenas(){
             </div>
             <div className="flex flex-col md:pl-10 gap-5 py-3">
               {isLoadingResenas ? null :resenas.length>0 &&  resenas.map((resena)=>{
-                return <ResenaPerfil todasResenas={true} resena={resena}/>
+                return <ResenaPerfil key={resena.id} todasResenas={true} resena={resena}/>
               })}
             </div>
         </section>

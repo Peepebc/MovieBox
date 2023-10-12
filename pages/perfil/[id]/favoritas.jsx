@@ -66,7 +66,7 @@ export default function Favoritas() {
               ? null
               : favoritas.length>0 && favoritas.map((pelicula) => {
                   return (
-                    <Link href={`/pelicula/${pelicula.id}`}>
+                    <Link key={pelicula.id} href={`/pelicula/${pelicula.id}`}>
                       <img
                         className="w-32 h-36 md:w-52 md:h-80 rounded-xl"
                         src={pelicula.imagen}

@@ -19,7 +19,6 @@ export default function Navigation(){
             headers: { 'Content-type': 'application/json', 'Authorization': 'Bearer ' + sessionStorage.getItem("jwt") },
             credentials: 'same-origin'
         }).then(res => res.json()).then(datos => {
-          console.log(datos)
             setUser(datos)
         })
       }

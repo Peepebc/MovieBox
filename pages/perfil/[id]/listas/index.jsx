@@ -77,7 +77,7 @@ export default function Listas(){
             <div className="flex justify-center">
                 <div className="grid md:grid-cols-2 gap-8 py-10 gap-x-64">
                   {isLoadingListas ? null :listas.length>0 && listas.map((lista)=>{
-                    return <Lista lista={lista}/>
+                    return <Lista key={lista.id} lista={lista}/>
                   })}
                 </div>
             </div>

@@ -58,7 +58,7 @@ export default function Profile(){
           </div>
             <div className="flex flex-wrap md:flex-nowrap gap-5 py-5 md:justify-start justify-center">
               {isLoadingPeliculas ? null : peliculas.length>0 && peliculas.map((pelicula)=>{
-                return(<Link href={`/pelicula/${pelicula.id}`}><img className='w-32 h-44 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
+                return(<Link key={"vista-"+pelicula.id} href={`/pelicula/${pelicula.id}`}><img className='w-32 h-44 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
               }) }
             </div>
             {peliculas && peliculas.length==0 ? <p className="text-center py-5">NO HAY PELICULAS VISTAS</p> :null}
@@ -71,7 +71,7 @@ export default function Profile(){
           </div>
           <div className="flex flex-wrap md:flex-nowrap gap-5 py-5 md:justify-start justify-center">
               {isLoadingFavoritas ? null : favoritas.length>0 && favoritas.map((pelicula)=>{
-                return(<Link href={`/pelicula/${pelicula.id}`}><img className='w-32 h-44 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
+                return(<Link key={"fav-"+pelicula.id} href={`/pelicula/${pelicula.id}`}><img className='w-32 h-44 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
               })}
             </div>
             {favoritas && favoritas.length==0 ? <p className="text-center py-5">NO HAY PELICULAS FAVORITAS</p> :null}
@@ -85,7 +85,7 @@ export default function Profile(){
           </div>
           <div className='flex flex-wrap md:px-10 gap-5 justify-evenly'>
             {isLoadingResenas ? null :resenas.length>0 && resenas.map((resena)=>{
-              return <ResenaPerfil resena={resena}/>
+              return <ResenaPerfil key={"resena-"+resena.id} resena={resena}/>
             })}
           </div>
           {resenas && resenas.length==0 ? <p className="text-center py-5">NO HAY RESEÑAS</p> :null}
@@ -99,7 +99,7 @@ export default function Profile(){
           <div className="flex justify-center">
               <div className="grid md:grid-cols-2 gap-8 py-10 gap-x-64">
                 {isLoadingListas ? null : listas.length>0 && listas.map((lista)=>{
-                  return <Lista lista={lista}/>
+                  return <Lista key={"lista-"+lista.id} lista={lista}/>
                 })}
               </div>
           </div>

@@ -109,7 +109,7 @@ export default function PeliculasLista(){
             <div className="flex flex-col items-center">
               <div className="grid grid-cols-3 md:grid-cols-7 gap-5 py-10">
               {isLoadingPeliculas ? null : peliculas.incluye && peliculas.incluye.map((pelicula)=>{
-                  return(<Link href={`/pelicula/${pelicula.id}`}><img className='w-32 h-36 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
+                  return(<Link key={pelicula.id} href={`/pelicula/${pelicula.id}`}><img className='w-32 h-36 md:w-52 md:h-80 rounded-xl' src={pelicula.imagen} alt="" /></Link>)
                 }) }
               </div>
               {/* <div>
@@ -136,7 +136,7 @@ export default function PeliculasLista(){
                     
                         {peliculasFiltradas && peliculasFiltradas.map((p)=>{
                           return (
-                            <div className="flex items-center justify-between w-72 gap-5">
+                            <div key={p.titulo+ "-" +p.i} className="flex items-center justify-between w-72 gap-5">
                               <div className="flex items-center gap-2">
                                 <img className="w-16 h-24 rounded-md" src={p.imagen}/>
                                 <p className="text-sm">{p.titulo}</p>
