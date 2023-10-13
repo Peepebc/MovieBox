@@ -130,7 +130,7 @@ export default function PeliculasLista(){
                     <h1 className="font-extrabold text-xl text-center">BUSCAR PELICULAS</h1>
                     <input className="bg-transparent border-b-2 focus:outline-none text-center p-2" required  type="text" onChange={(input)=>{
                         clearTimeout(typingTimerLocal)
-                        typingTimerLocal= setTimeout(()=>filtrarPeliculas(input.target.value),500)}}/>
+                        typingTimerLocal= setTimeout(()=>filtrarPeliculas(input.target.value),300)}}/>
                   </div>
                   <div className="flex flex-col items-center gap-5 h-72 overflow-auto">
                     
