@@ -1,8 +1,8 @@
 
-import ResenaPerfil from "@/pages/components/ResenaPerfil";
+import ResenaPerfil from "@/components/ResenaPerfil.jsx";
 import { useRouter } from 'next/router'
 import { useContext, useEffect } from "react";
-import Context from '../../Context.js'
+import Context from '../../../Context.js'
 import getDatosUsuario from "@/hooks/Perfil/getDatosUsuario.jsx";
 import getResenasUsuario from "@/hooks/Perfil/getResenasUsuario.jsx";
 import Link from "next/link.js";

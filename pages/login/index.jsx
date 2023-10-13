@@ -5,7 +5,7 @@ import peliculas from '../../public/resources/peliculas.png';
 import { useForm } from "react-hook-form";
 import { useCookies } from "react-cookie";
 import { useRouter  } from 'next/router';
-import LayoutNoNav from "../components/LayoutNoNav";
+import LayoutNoNav from "../../components/LayoutNoNav";
 import { parseCookies } from "@/helpers";
 import { useEffect, useState } from "react";
 

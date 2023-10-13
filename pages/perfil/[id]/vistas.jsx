@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from 'next/router'
 import { useContext, useEffect } from "react";
-import Context from '../../Context.js'
+import Context from '../../../Context.js'
 import getVistasUsuario from "@/hooks/Perfil/getVistasUsuario.jsx";
 import getDatosUsuario from "@/hooks/Perfil/getDatosUsuario.jsx";
 import { useCookies } from "react-cookie";

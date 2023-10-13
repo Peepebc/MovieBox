@@ -1,6 +1,6 @@
 import { CircularProgress } from "@mui/material";
 import { useEffect, useState } from "react";
-import Resena from "../components/Resena";
+import Resena from "../../components/Resena";
 
 
 export default function Resenas(){

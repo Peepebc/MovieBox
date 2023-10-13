@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { useRouter } from 'next/router'
 import { useContext, useEffect } from "react";
-import Context from '../Context.js'
-import Lista from "../components/Lista";
+import Context from '../../Context.js'
+import Lista from "../../components/Lista.jsx";
 import getUltimasPeliculasUsuario from "@/hooks/Perfil/getUltimasPeliculasUsuario";
 import getUltimasListasUsuario from "@/hooks/Perfil/getUltimasListasUsuario";
 import getUltimasResenasUsuario from "@/hooks/Perfil/getUltimasResenasUsuario";
 import getUltimasFavoritasUsuario from "@/hooks/Perfil/getUltimasFavoritasUsuario";
 import getDatosUsuario from "@/hooks/Perfil/getDatosUsuario";
-import ResenaPerfil from "../components/ResenaPerfil";
+import ResenaPerfil from "../../components/ResenaPerfil.jsx";
 import { useCookies } from "react-cookie";
 
 

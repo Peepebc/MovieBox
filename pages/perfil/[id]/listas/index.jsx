@@ -1,7 +1,7 @@
-import Lista from "@/pages/components/Lista";
+import Lista from "@/components/Lista";
 import { useRouter } from 'next/router'
 import { useContext, useState } from "react";
-import Context from '@/pages/Context.js'
+import Context from '@/Context.js'
 import getListasUsuario from "@/hooks/Perfil/getListasUsuario";
 import getDatosUsuario from "@/hooks/Perfil/getDatosUsuario";
 import Link from "next/link";

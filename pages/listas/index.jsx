@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Lista from "../components/Lista";
+import Lista from "../../components/Lista";
 import { useEffect, useState } from "react";
 export default function TodasListas(){
 

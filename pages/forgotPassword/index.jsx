@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LayoutNoNav from "../components/LayoutNoNav";
+import LayoutNoNav from "../../components/LayoutNoNav";
 import { useState } from "react";
 
 ForgotPassword.getLayout = function(page) {

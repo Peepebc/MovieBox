@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Usuario from "../components/Usuario";
+import Usuario from "../../components/Usuario";
 import { useEffect, useState } from "react";
 
 export default function TodosUsuarios(){

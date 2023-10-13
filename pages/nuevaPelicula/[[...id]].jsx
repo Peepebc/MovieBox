@@ -5,7 +5,7 @@ import peliculas from '../../public/resources/peliculas.png';
 import { useForm } from "react-hook-form";
 import { useRouter  } from 'next/router';
 import { useContext, useEffect, useState } from "react";
-import Context from "../Context";
+import Context from "../../Context";
 import getDatosPelicula from "@/hooks/Pelicula/getDatosPelicula";
 
 export default function NuevaPelicula(){

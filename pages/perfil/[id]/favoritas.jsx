@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useContext, useState } from "react";
-import Context from "../../Context.js";
+import Context from "../../../Context.js";
 import { CircularProgress } from "@mui/material";
 import getDatosUsuario from "@/hooks/Perfil/getDatosUsuario.jsx";
 import getFavoritasUsuario from "@/hooks/Perfil/getFavoritasUsuario.jsx";

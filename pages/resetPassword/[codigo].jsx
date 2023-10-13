@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LayoutNoNav from "../components/LayoutNoNav";
+import LayoutNoNav from "../../components/LayoutNoNav";
 import { useState } from "react";
 import { useRouter } from "next/router";
 

@@ -1,8 +1,8 @@
 
 import { useContext, useEffect, useState } from 'react'
-import Context from './Context.js'
-import Resena from './components/Resena.jsx'
-import Lista from './components/Lista.jsx'
+import Context from '../Context.js'
+import Resena from '../components/Resena.jsx'
+import Lista from '../components/Lista.jsx'
 import Link from 'next/link';
 import getUltimasPeliculas from '@/hooks/Inicio/getUltimasPeliculas.jsx';
 import getUltimasResenas from '@/hooks/Inicio/getUltimasResenas.jsx';

@@ -3,7 +3,7 @@ import Image from 'next/image';
 import logo from '../../public/resources/moviebox.png';
 import peliculas from '../../public/resources/peliculas.png';
 import { useState } from "react";
-import LayoutNoNav from "../components/LayoutNoNav";
+import LayoutNoNav from "../../components/LayoutNoNav";
 import { useForm } from "react-hook-form";
 import { useCookies } from "react-cookie";
 import { useRouter } from "next/router";

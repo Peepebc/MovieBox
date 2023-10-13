@@ -8,11 +8,11 @@ import {
   AiOutlineStar,
 } from "react-icons/ai";
 import { useContext, useEffect, useState } from "react";
-import ResenaPelicula from "../components/ResenaPelicula";
+import ResenaPelicula from "../../components/ResenaPelicula";
 import getDatosPelicula from "@/hooks/Pelicula/getDatosPelicula.jsx";
 import getResenasPelicula from "@/hooks/Pelicula/getResenasPelicula.jsx";
 import getIsFav from "@/hooks/Pelicula/getIsFav";
-import Context from "../Context";
+import Context from "../../Context";
 import getIsWatched from "@/hooks/Pelicula/getIsWatched";
 
 
