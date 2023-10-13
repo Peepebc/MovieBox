@@ -15,7 +15,7 @@ export async function middleware(request){
     if(request.nextUrl.pathname.includes('/nuevaPelicula')){
         if(jwt === undefined) return NextResponse.redirect(new URL('/',request.url))
 
-        const datos = await fetch("/api/Usuarios/Validame",{
+        const datos = await fetch("https://moviebox.1.us-1.fl0.io/Usuarios/Validame",{
             method: 'GET',
             headers: { 'Content-type': 'application/json', 'Authorization': 'Bearer ' + jwt.value },
             credentials: 'same-origin'
