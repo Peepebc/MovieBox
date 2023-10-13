@@ -9,7 +9,7 @@ export default function getIsWatched({idPelicula}){
       useEffect(()=>{
         if(!router.isReady) return
         if(sessionStorage.getItem("jwt")){
-            fetch("https://moviebox.1.us-1.fl0.io/Ver/isWatched/"+idPelicula,{
+            fetch("/api/Ver/isWatched/"+idPelicula,{
                 method: 'GET',
                 headers: { 'Content-type': 'application/json', 'Authorization': 'Bearer ' + sessionStorage.getItem("jwt") },
                 credentials: 'same-origin'

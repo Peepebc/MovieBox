@@ -5,7 +5,7 @@ module.exports = {
     return [
       {
         source: '/api/:path*',
-        destination: 'https://moviebox.1.us-1.fl0.io/:path*' // Proxy to Backend
+        destination: '/api/:path*' // Proxy to Backend
       }
     ]
   }

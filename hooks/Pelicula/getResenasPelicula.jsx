@@ -9,7 +9,7 @@ export default function getResenasPelicula(idPelicula){
 
       useEffect(()=>{
         if(!router.isReady) return
-        fetch(`https://moviebox.1.us-1.fl0.io/Resenas/${idPelicula}`, {
+        fetch(`/api/Resenas/${idPelicula}`, {
           method: 'GET',
           headers: { 'Content-type': 'application/json'}
       },setLoading(true))

@@ -32,7 +32,7 @@ async function onSubmit (data) {
         formData.append("Imagen",data.Imagen[0],data.Imagen[0].name)
         formData.append("Puntuacion",0)
     }
-    const nuevaPeli = await fetch('https://moviebox.1.us-1.fl0.io/Peliculas/AnadirPelicula', {
+    const nuevaPeli = await fetch('/api/Peliculas/AnadirPelicula', {
         method: 'POST',
         headers: { Authorization: "Bearer " + sessionStorage.getItem("jwt") },
         body:formData

@@ -31,7 +31,7 @@ export default function ResetPassword(){
         const cambiarContraseña = {nuevaContrasena:contrasena, codigo:codigo}
 
         
-        fetch('https://moviebox.1.us-1.fl0.io/Usuarios/CambiarContraseña', {
+        fetch('/api/Usuarios/CambiarContraseña', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json'},
                 body: JSON.stringify(cambiarContraseña),

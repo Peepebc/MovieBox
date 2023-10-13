@@ -39,7 +39,7 @@ export default function Register(){
         formData.append("password",data.Contrasena)
         formData.append("Imagen",data.Pfp[0],data.Pfp[0].name)
     
-        const register = await fetch('https://moviebox.1.us-1.fl0.io/Usuarios/Register', {
+        const register = await fetch('/api/Usuarios/Register', {
             method: 'POST',
             body:formData,
         }).then(res => res.json()).then(data => {return data})
@@ -47,7 +47,7 @@ export default function Register(){
         if(register.succes) {
             const datos = {usuario:data.Usuario, password:data.Contrasena}
 
-            const login = await fetch('https://moviebox.1.us-1.fl0.io/Usuarios/Login', {
+            const login = await fetch('/api/Usuarios/Login', {
                     method: 'POST',
                     headers: { 'Content-type': 'application/json'},
                     body: JSON.stringify(datos),

@@ -28,7 +28,7 @@ export default function Listas(){
     }
 
     async function crearLista (){
-      const res = await fetch("https://moviebox.1.us-1.fl0.io/Listas/CrearLista/",{
+      const res = await fetch("/api/Listas/CrearLista/",{
         method: "POST",
         headers: {
           "Content-type": "application/json",

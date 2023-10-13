@@ -46,7 +46,7 @@ export default function PeliculasLista(){
     console.log(peliculas)
     const anadirPelicula=(p)=>{
       const pelicula = {idPelicula:p.id,idLista:idLista}
-      fetch('https://moviebox.1.us-1.fl0.io/Contiene/AnadirPeliculaLista', {
+      fetch('/api/Contiene/AnadirPeliculaLista', {
         method: 'POST',
         headers: {
           "Content-type": "application/json",

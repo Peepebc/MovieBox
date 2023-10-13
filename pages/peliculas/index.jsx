@@ -17,7 +17,7 @@ export default function TodasPeliculas(){
     const [id,setId] = useState(null)
 
    async function eliminarPelicula (){
-      const res = await fetch('https://moviebox.1.us-1.fl0.io/Peliculas/EliminarPelicula/'+id, {
+      const res = await fetch('/api/Peliculas/EliminarPelicula/'+id, {
           method: 'DELETE',
           headers: { 'Content-type': 'application/json',
           Authorization: "Bearer " + sessionStorage.getItem("jwt"),}

@@ -11,7 +11,7 @@ export default function getDatosPelicula(idPelicula){
       useEffect(()=>{
         if(!idPelicula) return 
         if(!router.isReady) return
-        fetch(`https://moviebox.1.us-1.fl0.io/Peliculas/${idPelicula}`, {
+        fetch(`/api/Peliculas/${idPelicula}`, {
           method: 'GET',
           headers: { 'Content-type': 'application/json'}
       },setLoading(true))

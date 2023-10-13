@@ -34,7 +34,7 @@ export default function Pelicula() {
     const method = isFav ? "DELETE" : "GET";
     const url = isFav ? "EliminarFav/" : "AnadirFav/";
     if (user) {
-      fetch("https://moviebox.1.us-1.fl0.io/Favs/" + url + idPelicula, {
+      fetch("/api/Favs/" + url + idPelicula, {
         method: method,
         headers: {
           "Content-type": "application/json",
@@ -54,7 +54,7 @@ export default function Pelicula() {
     const method = isWatched ? "DELETE" : "GET";
     const url = isWatched ? "EliminarVer/" : "AnadirVer/";
     if (user) {
-      fetch("https://moviebox.1.us-1.fl0.io/Ver/" + url + idPelicula, {
+      fetch("/api/Ver/" + url + idPelicula, {
         method: method,
         headers: {
           "Content-type": "application/json",
@@ -74,7 +74,7 @@ export default function Pelicula() {
     if (user) {
       const resenaRequest = { descripcion: resenaModal, valoracion: rating };
 
-      fetch("https://moviebox.1.us-1.fl0.io/Resenas/AnadirResena/" + idPelicula, {
+      fetch("/api/Resenas/AnadirResena/" + idPelicula, {
         method: "POST",
         headers: {
           "Content-type": "application/json",

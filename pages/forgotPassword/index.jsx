@@ -17,7 +17,7 @@ export default function ForgotPassword(){
     const enviarDatos =()=>{
         if(email.trim(" ") == "") return
 
-        const forgot = fetch('https://moviebox.1.us-1.fl0.io/Usuarios/OlvidarContraseña', {
+        const forgot = fetch('/api/Usuarios/OlvidarContraseña', {
                 method: 'POST',
                 headers: { 'Content-type': 'application/json'},
                 body: JSON.stringify(email),

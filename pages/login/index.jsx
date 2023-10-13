@@ -24,7 +24,7 @@ async function onSubmit (datos) {
     var login 
 
     try{
-        login = await fetch('https://moviebox.1.us-1.fl0.io/Usuarios/Login', {
+        login = await fetch('/api/Usuarios/Login', {
             method: 'POST',
             headers: { 'Content-type': 'application/json'},
             body: JSON.stringify(datos),

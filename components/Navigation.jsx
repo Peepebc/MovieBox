@@ -14,7 +14,7 @@ export default function Navigation(){
 
     useEffect(() => {
       if(sessionStorage.getItem("jwt")){
-        fetch("https://moviebox.1.us-1.fl0.io/Usuarios/Validame",{
+        fetch("/api/Usuarios/Validame",{
             method: 'GET',
             headers: { 'Content-type': 'application/json', 'Authorization': 'Bearer ' + sessionStorage.getItem("jwt") },
             credentials: 'same-origin'
