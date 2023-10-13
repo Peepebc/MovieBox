@@ -1,4 +1,4 @@
-import logo from '../../public/resources/moviebox.png';
+import logo from '../public/resources/moviebox.png';
 import Link from "next/link";
 import Image from 'next/image';
 import { useContext, useEffect, useState } from "react";
