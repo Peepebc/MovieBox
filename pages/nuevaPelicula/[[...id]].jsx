@@ -18,8 +18,8 @@ const [urlImagen,setUrlImagen] = useState(null)
 const { pelicula, isLoadingPelicula } = getDatosPelicula(id);
 
 async function onSubmit (data) {
-    var formData = new FormData()
     
+    var formData = new FormData()
     formData.append("Titulo",data.Titulo ? data.Titulo :pelicula.titulo )
     formData.append("Director",data.Director ? data.Director :pelicula.director)
     formData.append("Generos",data.Generos ? data.Generos :pelicula.generos)
@@ -32,18 +32,12 @@ async function onSubmit (data) {
         formData.append("Imagen",data.Imagen[0],data.Imagen[0].name)
         formData.append("Puntuacion",0)
     }
-    
-    console.log(formData)
-    const nuevaPeli = fetch('https://moviebox.1.us-1.fl0.io/Peliculas/AnadirPelicula', {
+    const nuevaPeli = await fetch('https://moviebox.1.us-1.fl0.io/Peliculas/AnadirPelicula', {
         method: 'POST',
-        headers: { 
-            'Content-type': 'application/json',
-            Authorization: "Bearer " + sessionStorage.getItem("jwt")
-        },
+        headers: { Authorization: "Bearer " + sessionStorage.getItem("jwt") },
         body:formData
-    }).then(res => {res.json()})
+    }).then(res => {return res.json()})
     .then(data => {return data})
-    console.log(nuevaPeli)
     if(nuevaPeli.succes) router.push(`/`)
 }
     return (
